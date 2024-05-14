@@ -12,6 +12,9 @@ def division(a, b):
         return "Error: No se puede dividir por cero"
     else:
         return a / b
+    
+def potencia(a,b):
+    return a ** b
 
 def calculadora():
     print("Calculadora básica")
@@ -19,6 +22,7 @@ def calculadora():
     print("2. Resta")
     print("3. Multiplicación")
     print("4. División")
+    print("5. Potencia")
     opcion = input("Seleccione una opción: ")
 
     num1 = int(input("Ingrese el primer número: "))
@@ -32,6 +36,8 @@ def calculadora():
         print("Resultado:", multiplicacion(num1, num2))
     elif opcion == '4':
         print("Resultado:", division(num1, num2))
+    elif opcion == '5':
+        print("Resultado:", potencia(num1,num2))
     else:
         print("Opción no válida")
 
