@@ -25,6 +25,16 @@ def raizcubica(a):
 def porcentaje(a,b):
     return a * b/100
 
+def factorial(a):
+    if a < 0:
+        print("Sorry, factorial does not exist for negative numbers")
+    elif a == 0:
+        print("The factorial of 0 is 1")
+    else:
+        for i in range(1,a + 1):
+            factorial = factorial*i
+    print("The factorial of",a,"is",factorial)
+
 
 def calculadora():
     print("Calculadora básica")
@@ -36,6 +46,7 @@ def calculadora():
     print("6. Raiz Cuadrada")
     print("7. Raiz Cubica")
     print("8. Porcentaje")
+    print("9. Factorial")
     
     opcion = input("Seleccione una opción: ")
 
@@ -57,6 +68,8 @@ def calculadora():
     elif opcion == "8":
         num1 = int(input("Ingrese el número: "))
         num2 = int(input("Ingrese el Porcentaje: "))
+    elif opcion == "9":
+        num1 = int(input("Ingrese el numero; "))
     else:
         print("Opcion no valida")
         return
@@ -78,6 +91,8 @@ def calculadora():
         print("Resultado:", raizcubica(num1))
     elif opcion == '8':
         print("Resultado:", porcentaje(num1, num2))
+    elif opcion == "9":
+        print("Resultado: " , factorial(num1))
     else:
         print("Opción no válida")
         
