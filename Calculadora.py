@@ -22,9 +22,6 @@ def raizcuadrada(a):
 def raizcubica(a):
     return a ** (1/3)
 
-def porcentaje(a,b):
-    return a * b/100
-
 
 def calculadora():
     print("Calculadora básica")
@@ -35,7 +32,6 @@ def calculadora():
     print("5. Potencia")
     print("6. Raiz Cuadrada")
     print("7. Raiz Cubica")
-    print("8. Porcentaje")
     
     opcion = input("Seleccione una opción: ")
 
@@ -54,11 +50,6 @@ def calculadora():
             print("Error: La raíz cubica de un número debe ser positiva. Ingrese nuevamente")
             num1 = int (input("Ingrese un número nuevamente"))
         num2 = None
-
-    elif opcion == "8":
-        num1 = int(input("Ingrese el número: "))
-        num2 = int(input("Ingrese el Porcentaje: "))
-
     else:
         print("Opcion no valida")
         return
@@ -78,8 +69,6 @@ def calculadora():
         print("Resultado:", raizcuadrada(num1))
     elif opcion =='7':
         print("Resultado:", raizcubica(num1))
-    elif opcion == '8':
-        print("Resultado:", porcentaje(num1, num2))
     else:
         print("Opción no válida")
         
